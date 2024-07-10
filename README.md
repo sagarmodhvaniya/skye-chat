@@ -1,6 +1,5 @@
-# Welcome to your Expo app 👋
+# Welcome to your Skye-chat 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
 
@@ -25,16 +24,26 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
-
-When you're ready, run:
-
+## Change auth and agentId
+1. Clone project
+2. Install Firebase CLI: If you haven't already, install the Firebase CLI:
+   ```bash
+      npm install -g firebase-tools
+   ```
+3. Login to Firebase: Authenticate with Firebase:
 ```bash
-npm run reset-project
-```
+      firebase login
+   ```
+   
+4. Navigate to your project directory: Move to the directory where your Firebase project is located.   
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+5. Chnage required value into `index.js`
 
+6. Deploy function (DO NOT PUSH SECRET ON GIT BEFORE PUSH REMOVE IT)
+   ```bash
+      firebase deploy --only functions
+   ```
+   
 ## Learn more
 
 To learn more about developing your project with Expo, look at the following resources:
