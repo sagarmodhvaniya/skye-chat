@@ -208,9 +208,6 @@ const ChatScreen: React.FC = () => {
   );
 };
 
-// Get screen dimensions
-const { height, width } = Dimensions.get('window');
-
 // Define styles
 const styles = StyleSheet.create({
   container: {

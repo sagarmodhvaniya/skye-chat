@@ -1,4 +1,3 @@
-import uuid from 'react-native-uuid';
 import icons from "./icons"
 export const BOT = {
     _id: 4,
