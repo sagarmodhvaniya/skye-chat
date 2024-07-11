@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import {  DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
-import { useColorScheme } from '@/hooks/useColorScheme';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout: React.FC = () => {
-  const colorScheme = useColorScheme();
 
   // Load custom fonts
   const [fontsLoaded] = useFonts({
@@ -31,7 +29,7 @@ const RootLayout: React.FC = () => {
 
   return (
     // Use ThemeProvider to apply theme based on the color scheme
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={DefaultTheme}>
       <Stack initialRouteName="main">
         {/* Define screen routes */}
         <Stack.Screen name="chatScreen" options={{ headerShown: false }} />
