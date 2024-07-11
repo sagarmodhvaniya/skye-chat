@@ -25,7 +25,7 @@ In the output, you'll find options to open the app in a
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
 ## Change auth and agentId
-1. Clone project
+1. Clone project(and go to function folder cd ./function)
 2. Install Firebase CLI: If you haven't already, install the Firebase CLI:
    ```bash
       npm install -g firebase-tools
@@ -38,6 +38,10 @@ You can start developing by editing the files inside the **app** directory. This
 4. Navigate to your project directory: Move to the directory where your Firebase project is located.   
 
 5. Chnage required value into `index.js`
+   - projectId 
+   - location 
+   - agentId 
+   - serviceAccount(JSON)
 
 6. Deploy function (DO NOT PUSH SECRET ON GIT BEFORE PUSH REMOVE IT)
    ```bash

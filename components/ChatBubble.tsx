@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 0,
     borderTopRightRadius: 20,
     marginBottom: 20,
-    marginRight: 10,
+    marginRight: 12,
   },
   leftText: {
     ...commonText,
