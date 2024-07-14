@@ -26,6 +26,9 @@ You can start developing by editing the files inside the **app** directory. This
 
 ## Change auth and agentId
 1. Clone project(and go to function folder cd ./function)
+   Method 1 using HTTP -- git clone https://github.com/sagarmodhvaniya/skye-chat.git
+   Method 2 using SSH -- git@github.com:sagarmodhvaniya/skye-chat.git
+
 2. Install Firebase CLI: If you haven't already, install the Firebase CLI:
    ```bash
       npm install -g firebase-tools
