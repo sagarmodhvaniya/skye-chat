@@ -101,7 +101,7 @@ const ChatScreen: React.FC = () => {
     } else if (response.list) {
       msg.list = response.list;
     }
-    setInputDisabled(response.isbloackMode || false);
+    setInputDisabled(response.isBlockMode || false);
     setMessages(previousMessages => GiftedChat.append(previousMessages, [msg]));
     setIsTyping(false);
   };
@@ -176,6 +176,7 @@ const ChatScreen: React.FC = () => {
         <Text style={styles.flowName}>{flowName}</Text>
       </View>
       <GiftedChat
+            accessoryStyle={{height: "auto"}}
         renderBubble={renderBubble}
         renderMessage={renderCustomMessage}
         renderSend={renderSend}
@@ -187,11 +188,12 @@ const ChatScreen: React.FC = () => {
         isTyping={isTyping}
         renderFooter={renderFooter}
         renderInputToolbar={customInputToolbar}
+        keyboardShouldPersistTaps={ 'always' }
         renderQuickReplies={(props) => (
           <QuickReplies
             {...props}
             containerStyle={{
-              flexDirection: inputDisabled ? 'column' : 'row',
+              flexDirection: inputDisabled ? 'column-reverse' : 'row',
             }}
             quickReplyStyle={styles.quickReply}
             quickReplyTextStyle={{

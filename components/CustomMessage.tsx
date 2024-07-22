@@ -1,6 +1,6 @@
 // CustomMessage.tsx
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Platform } from 'react-native';
 import { IMessage } from 'react-native-gifted-chat';
 
 interface CustomMessageProps {
@@ -65,6 +65,8 @@ const styles = StyleSheet.create({
     width: '80%',
     margin: 10,
     // overflow: 'scroll',
+    maxHeight:Platform.OS === 'ios' ? 800 : 600,
+    height: Platform.OS === 'ios' ? 650 : 700,
     marginBottom: 20
   },
   item: {
